@@ -4,6 +4,11 @@
 
 @import "tailwindcss/utilities";
 
+/* Tiny MCE */
+@import "prism-dark.css";
+/*@import "prism-light.css";*/
+@import "tiny-mce-content.css";
+
 
 .background-image {
     background-image: url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_960_720.jpg');

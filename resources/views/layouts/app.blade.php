@@ -14,6 +14,31 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/{{ env('TINY_MCE_API_KEY') }}/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            body_class: 'tiny-mce-content',
+            content_css : '/css/app.css',
+            plugins: 'paste link image table hr insertdatetime lists checklist tinymcespellchecker linkchecker emoticons codesample',
+            codesample_languages: [
+                { text: 'HTML/XML', value: 'markup' },
+                { text: 'JavaScript', value: 'javascript' },
+                { text: 'PHP', value: 'php' },
+                { text: 'Python', value: 'python' },
+                { text: 'C#', value: 'csharp' },
+                { text: 'Python', value: 'python' },
+                { text: 'CSS', value: 'css' },
+            ],
+            toolbar: 'undo redo | paste pastetext codesample | formatselect link image | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify |fontselect fontsizeselect  |  outdent indent |  numlist bullist checklist | forecolor backcolor table hr emoticons',
+            menubar: 'edit',
+            paste_as_text: true
+        });
+    </script>
+
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">

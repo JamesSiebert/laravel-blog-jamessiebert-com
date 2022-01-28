@@ -36,8 +36,10 @@
             />
 
             <textarea
+                id="tinyMCE"
                 name="description"
                 placeholder="Description..."
+                rows="40"
                 class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none">
                 {{ $post->description }}
             </textarea>
